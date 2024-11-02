@@ -1,0 +1,105 @@
+body {
+  font-family: Monocraft, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(29, 31, 45);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  background-color: rgb(54, 85, 136);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #eaeaea;
+}
+
+#navbar .logo,
+#navbar .items a {
+  padding: 1.25rem 1rem;
+}
+
+#navbar .items {
+  display: flex;
+  gap: 1rem;
+}
+
+.items a:hover {
+  color: rgb(196, 188, 79);
+}
+
+#navbar .hamburger {
+  fill: #eaeaea;
+  display: none;
+}
+#navbar .hamburger:hover {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  padding: 1rem;
+  padding-top: 4rem;
+  color: rgb(196, 188, 79);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex: 25%;
+  padding: 20px;
+  margin: 0.25rem;
+  background-color: rgba(54, 85, 136, 0.4);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 600px) {
+  #navbar .items {
+    display: none;
+  }
+  #navbar .hamburger {
+    display: block;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #navbar.responsive {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #navbar.responsive .items {
+    background-color: rgb(24, 28, 77);
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  #navbar.responsive .items a {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  #navbar .hamburger {
+    position: absolute;
+    right: 1rem;
+    top: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .column {
+    flex: 48%;
+  }
+}
